@@ -1,0 +1,9 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+.bigmenu {
+    font-size: 14px;
+    line-height: 1.5;
+ }
+
+ .bigmenu > .header {    
+    line-height: 2;
+ }
