@@ -30,7 +30,7 @@ export class UserService {
   }
 
   update(user:User): Observable<any>{
-    let usrs = this.http.put<any>(AppSettings.APP_URL+'/users/'+user.id,user);    
+    let usrs = this.http.put<any>(AppSettings.APP_URL+'/users/'+user.idUser,user);    
     return usrs;
   }
 

@@ -2,11 +2,15 @@
   <section class="content-header">
     <h1>
       {{pageTitle}}
-
     </h1>
     <ol class="breadcrumb">
       <li *ngFor="let m of bc" [ngClass]="m.class"><a href="#"><i [ngClass]="m.icon"></i> {{m.title}}</a></li>
     </ol>
+
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" [(ngModel)]="filter" >
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
   </section>
   <section class="content">
 
@@ -31,7 +35,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let u of usuarios">
+            <tr *ngFor="let u of usuarios | filter:filter; let i = index">
               <td>{{u.idUser}}</td>
               <td>{{u.nome}}</td>
               <td>{{u.surname}}</td>
@@ -55,7 +59,6 @@
           </tbody>
         </table>
       </div>
-
     </div>
   </section>
 </section>

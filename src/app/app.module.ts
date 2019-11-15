@@ -10,6 +10,7 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
 import { LayoutComponent } from './layout/layout/layout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { Ng2SearchPipeModule  } from "ng2-search-filter";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     StorageServiceModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
